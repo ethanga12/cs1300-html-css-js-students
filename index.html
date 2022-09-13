@@ -11,16 +11,92 @@
   <!-- page content goes into <body> -->
   <body>
     <div id="cs1300-gallery">
-      <h1>Welcome to my bakery</h1>
-      <p>Add your own images and styles!</p>
+      <h1 style="font-family: 'Courier New', Courier, monospace; padding-left: 1%; padding-top: 2%;">Welcome to my bakery</h1>
+      <!-- <p style="font-family: 'Courier New', Courier, monospace; padding-left: 1%;">Add your own images and styles!</p> -->
 
       <!-- TODO: PART I Add your own images and use CSS flex to make sure they work on different screen sizes -->
-      <div class="gallery-item-container">
-        <img class="gallery-item" src="./assets/jeff.jpg" alt="jeff watching u">
+      <div class="gallery-container" >
+        <div class="gallery-item-container">
+          <img class="gallery-item" src="./assets/Brownie.JPG" alt="jeff watching u">
+          <p>Brownie</p>
+          <p>$5.00</p>
+        </div>
+        <div class="gallery-item-container">
+          <img class="gallery-item" src="./assets/Carrot.jpg" alt="jeff watching u">
+          <p>Carrot Cake</p>
+          <p>$8.00</p>
+        </div>
+        <div class="gallery-item-container">
+          <img class="gallery-item" src="./assets/Macaron.jpeg" alt="jeff watching u">
+          <p>Macaron</p>
+          <p>$12.00 per dozen</p>
+        </div>
+        <div class="gallery-item-container">
+          <img class="gallery-item" src="./assets/Cookie.jpeg" alt="jeff watching u">
+          <p>Cookie</p>
+          <p>$6.00</p>
+        </div>
+        <div class="gallery-item-container">
+          <img class="gallery-item" src="./assets/Rose.jpeg" alt="jeff watching u">
+          <p>Rose Street Special</p>
+          <p>$12.00</p>
+        </div>
+        <div class="gallery-item-container">
+          <img class="gallery-item" src="./assets/Red.jpg" alt="jeff watching u">
+          <p>Red Velvet Cupcake</p>
+          <p>$7.00</p>
+        </div>
       </div>
+
 
       <!-- TODO: PART II Uncomment the line below, and hook up this button to display data from an API -->
       <!-- <button onclick="">Press this button to display some fruit data</button> -->
+    </div>
+    <div id="cs1300-gallery-2">
+      <h1 style="font-family: 'Courier New', Courier, monospace; padding-left: 1%; padding-top: 2%;">Coming Soon</h1>
+      <!-- <p style="font-family: 'Courier New', Courier, monospace; padding-left: 1%;">Add your own images and styles!</p> -->
+
+      <!-- TODO: PART I Add your own images and use CSS flex to make sure they work on different screen sizes -->
+      <div class="gallery-container" >
+        
+        <div class="gallery-item-container">
+          <img class="gallery-item" src="./assets/Carrot.jpg" alt="jeff watching u">
+          <p>New Carrot Cake</p>
+          <p>$8.01</p>
+        </div>
+        <div class="gallery-item-container">
+          <img class="gallery-item" src="./assets/Brownie.JPG" alt="jeff watching u">
+          <p>New Brownie</p>
+          <p>$5.01</p>
+        </div>
+        <div class="gallery-item-container">
+          <img class="gallery-item" src="./assets/Cookie.jpeg" alt="jeff watching u">
+          <p>New Cookie</p>
+          <p>$6.01</p>
+        </div>
+        <div class="gallery-item-container">
+          <img class="gallery-item" src="./assets/Rose.jpeg" alt="jeff watching u">
+          <p>New Rose Street Special</p>
+          <p>$12.01</p>
+        </div>
+        <div class="gallery-item-container">
+          <img class="gallery-item" src="./assets/Red.jpg" alt="jeff watching u">
+          <p>New Red Velvet Cupcake</p>
+          <p>$7.01</p>
+        </div>
+        <div class="gallery-item-container">
+          <img class="gallery-item" src="./assets/Macaron.jpeg" alt="jeff watching u">
+          <p>New Macaron</p>
+          <p>$12.01 per dozen</p>
+        </div>
+      </div>
+
+
+      <!-- TODO: PART II Uncomment the line below, and hook up this button to display data from an API -->
+      <button onclick="updatePage()">Press this button to display some fruit data</button>
+      <div id="fruits" class="fruit">
+        <!-- <img id="fruit-img"> -->
+      </div>
     </div>
   </body>
 

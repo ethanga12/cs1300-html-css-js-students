@@ -12,8 +12,7 @@ const apiRequest = async () => {
    */
 
   // TODO fill in your own port number 
-  const PORT_NUMBER = "";
-
+  const PORT_NUMBER = "8010"
   const baseUrl = `http://localhost:${PORT_NUMBER}/proxy/api/`
 
   // This endpoint (https://www.fruityvice.com/doc/index.html#api-GET-getAll) returns a list of all the fruits and their info, feel free to play around with different endpoints!
@@ -34,30 +33,48 @@ const apiRequest = async () => {
   // Return the response in JSON format
   return response.json();
 }
-
 const updatePage = async () => {
   const gallery = document.getElementById('cs1300-gallery');
 
   // Make API request and get an array of fruit objects
   const fruitsArray = await apiRequest();
-  // console.log(fruitsArray);
+  console.log(fruitsArray);
 
   // TODO: Use either `map` and/or `filter` to extract some data from the array of fruit objects
   // For example, find "name of all fruits whose sugar > 15", 
-
+  const res = fruitsArray.filter(fruit => fruit.nutritions.sugar > 15); // shows all fruit whose sugar is greater than 15
+  console.log(res);
   // TODO: Create a new HTML element to display your data 
+  for (i in res) {
+    console.log(res[i].name);
+    exampleAddElement(res[i].name);
 
+  }
   // TODO: Append your new element to the page
-
+  
 }
 
 // SAMPLE CODE of how to create and append a new HTML element to the page
-const exampleAddElement = () => {
+const exampleAddElement = (result) => {
   // Create a new HTML element and set its properties
   const newElement = document.createElement('div');
-  newElement.innerHTML = "this text is inside a div";
-
+  const newImg = document.createElement('img');
+  if (result == "Persimmon") {
+    newImg.src = "assets/persimmon.jpeg"
+  }
+  if (result == "Fig") {
+    newImg.src = "assets/fig.jpeg"
+  } 
+  if (result == "Banana") {
+    newImg.src = "assets/banana.jpeg"
+  }
+  if (result == "Grapes") {
+    newImg.src = "assets/grapes.png"
+  }
+  newElement.innerHTML = result;
+  newElement.setAttribute('id', 'fruits');
   // Append the new element to an existing part of the webpage
-  const existingElement = document.getElementById('example-id');
+  const existingElement = document.getElementById('fruits');
   existingElement.append(newElement);
+  existingElement.append(newImg);
 }
